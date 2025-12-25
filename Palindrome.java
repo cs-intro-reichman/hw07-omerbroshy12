@@ -6,8 +6,17 @@ public class Palindrome {
     }
 	
 	/** Checks if the given string is a palindrome. */
-	public static boolean isPalindrome(String s) {
-		//// Replace the followaing statement with your code
-		return false;
+	public static boolean isPalindrome(String s) 
+	{
+		if (s.length() <= 1) {
+            return true;
+        }
+        char first = s.charAt(0);
+        char last = s.charAt(s.length() - 1);
+        if (first != last) {
+            return false;
+        }
+        String innerPart = s.substring(1, s.length() - 1);
+        return isPalindrome(innerPart);
     }
 }
