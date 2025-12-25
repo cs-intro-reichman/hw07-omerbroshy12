@@ -7,8 +7,12 @@ public class IntToBin {
     }
 
     /** Returns the binary representation of the given integer, as a string of 0's and 1's.  */
-    public static String toBinary(int x) {
-        //// Replace the following statement with your code
-        return "";
+    public static String toBinary(int x) 
+    {
+        if (x <= 1)
+        {
+            return String.valueOf(x);
+        }
+        return toBinary(x/2) + (x%2);
     }    
  }
